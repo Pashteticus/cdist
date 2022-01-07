@@ -8,7 +8,7 @@ TrainReader:
   batch_size: 256
   shuffle: True
   num_workers: 8
-  lmdb_sets_dir: 
+  lmdb_sets_dir: data/train/
 
 EvalReader:
   dataloader: dataset,evaldataloader
@@ -17,7 +17,7 @@ EvalReader:
   padding: True
   shuffle: True
   num_workers: 8
-  lmdb_sets_dir:
+  lmdb_sets_dir: data/test/
 
 TestReader:
   dataloader: dataset,evaldataloader
@@ -26,7 +26,7 @@ TestReader:
   padding: True
   shuffle: True
   num_workers: 0
-  lmdb_sets_dir: 
+  lmdb_sets_dir: data/train/
 
 Global:
   algorithm: CDistNet
@@ -50,7 +50,7 @@ Global:
   character_dict_path: ./dict/dic_62.txt
   seed: 1234
   pretrain_weights:
-  save_inference_dir:
+  save_inference_dir: /inf_model/
   infer_img:
 
 Architecture:
